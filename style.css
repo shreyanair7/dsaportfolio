@@ -1,0 +1,228 @@
+/* General Reset and Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Container for each section */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.section-content .image {
+  flex: 1;
+  max-width: 350px;
+  padding: 1rem;
+}
+
+.section-content .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.section-content .image img:hover {
+  transform: scale(1.08);
+}
+
+.section-content .text {
+  flex: 1.5;
+  padding: 1rem;
+}
+
+.section-content .text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.section-content .text a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section-content .text a:hover {
+  color: #f39c12;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* About Section */
+#about .section-content {
+  flex-direction: row;
+  gap: 4rem;
+}
+
+#about .section-content .image {
+  flex: 1;
+  max-width: 250px;
+}
+
+#about .section-content .text {
+  flex: 2;
+  max-width: 650px;
+}
+
+#about .section-content .text p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Course Section */
+#courses .section-content {
+  flex-direction: row-reverse;
+}
+
+#courses .section-content .image {
+  max-width: 500px;
+}
+
+#courses .section-content .text {
+  flex: 2;
+  max-width: 900px;
+}
+
+/* Project Section (Maze) */
+#projects .section-content {
+  flex-direction: row-reverse;
+}
+
+#projects .section-content .image {
+  max-width: 300px;
+}
+
+#projects .section-content .text {
+  flex: 2;
+  max-width: 650px;
+}
+
+/* Certification Section */
+#certifications .section-content {
+  flex-direction: row-reverse;
+}
+
+#certifications .section-content .image {
+  max-width: 300px;
+}
+
+#certifications .section-content .text {
+  flex: 2;
+  max-width: 700px;
+}
+
+/* Contact Section */
+#contact .section-content {
+  flex-direction: row;
+}
+
+#contact .section-content .text {
+  flex: 1;
+  padding: 1rem;
+}
+
+#contact .section-content .image {
+  flex: 1;
+}
+
+/* Navigation Bar */
+nav {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-content .image,
+  .section-content .text {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .section-content .image img {
+    max-width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+}
